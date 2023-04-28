@@ -24,8 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keyup', (event) => {
    document.querySelector(`.key[data='${event.key}']`).classList.remove('active');
   })
-
-  document.querySelectorAll
 })
   // let keyboardArr = []
 
