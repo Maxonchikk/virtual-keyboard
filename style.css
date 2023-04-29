@@ -1,7 +1,8 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   color: #fff;
+  background-color: #96bd59;
 }
 
 div {
@@ -9,21 +10,32 @@ div {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  padding: 15px 0;
   max-width: 1200px;
   height: 100vh;
-  /* background-color: #1daf29; */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.textarea {
+  width: 950px;
+  height: 150px;
+  margin-bottom: 10px;
+  border: 4px solid #a04ba0
 }
 
 .keyboard {
   display: flex;
   flex-flow: row wrap;
-  width: 1000px;
-  min-height: 200px;
-  border: 3px solid #0c0b0c;
+  justify-content: stretch;
+  width: 950px;
+  height: 50%;
+  border: 5px solid #0c0b0c;
 }
 
 .key {
@@ -31,12 +43,11 @@ div {
   border-radius: 5px;
   justify-content: center;
   align-content: center;
-  min-width: 40px;
-  height: 40px;
-  margin: 5px;
+  min-width: 30px;
+  height: 30px;
+  margin: 2.5px;
   padding: 10px;
   text-align: center;
-  /* border: 3px solid #1f1d22; */
   background-color: #19201f;
   transition: all 0.2s;
 }
@@ -45,4 +56,25 @@ div {
   transition: all 0.2s;
   border-radius: 20px;
   background-color: #636360;
+}
+
+.key[data='Tab'] {
+  width: 70px;
+}
+
+.key[data='Enter'] {
+  width: 100px;
+}
+
+.key[data='Space'] {
+  width: 330px;
+}
+
+.key[data='ShiftLeft'] {
+  width: 90px;
+}
+
+.key[data='ControlLeft'],
+.key[data='ControlRight'] {
+  width: 80px;
 }
